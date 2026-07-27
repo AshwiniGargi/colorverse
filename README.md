@@ -1,87 +1,36 @@
-# ColorVerse
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-ColorVerse is an SEO-first educational platform for printable colouring pages.
-Version 1 provides public page discovery, printable PDF downloads, print
-support, search, and a staff-only content administration workflow.
+## Getting Started
 
-## Stack
+First, run the development server:
 
-- Next.js App Router, React, TypeScript, and Tailwind CSS
-- shadcn/ui for accessible UI primitives
-- PostgreSQL and Prisma
-- Clerk with Google-only staff sign-in
-- Cloudinary for image and pre-generated PDF assets
-- Vitest, ESLint, Prettier, Husky, and lint-staged
+```bash
+npm run dev
+# or
+yarn dev
+# or
+pnpm dev
+# or
+bun dev
+```
 
-## Prerequisites
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-- Node.js 20.19 or newer
-- pnpm 10 or newer
-- A PostgreSQL database
-- Clerk and Cloudinary projects
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## Local setup
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-1. Install dependencies:
+## Learn More
 
-   ```bash
-   pnpm install
-   ```
+To learn more about Next.js, take a look at the following resources:
 
-2. Create your local environment file and replace every example value:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-   ```bash
-   cp .env.example .env.local
-   ```
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-3. In the Clerk Dashboard, enable Google as the only sign-in provider. Add all
-   permitted staff email addresses to `ADMIN_EMAIL_ALLOWLIST` as a
-   comma-separated, lower-case list.
+## Deploy on Vercel
 
-4. Validate the Prisma schema and generate the client:
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-   ```bash
-   pnpm prisma:validate
-   pnpm prisma:generate
-   ```
-
-5. Start the development server:
-
-   ```bash
-   pnpm dev
-   ```
-
-Open `http://localhost:3000`.
-
-## Commands
-
-| Command                | Purpose                           |
-| ---------------------- | --------------------------------- |
-| `pnpm dev`             | Run the local Next.js server.     |
-| `pnpm build`           | Create a production build.        |
-| `pnpm lint`            | Run ESLint.                       |
-| `pnpm format:check`    | Check formatting with Prettier.   |
-| `pnpm format`          | Format supported files.           |
-| `pnpm test`            | Run Vitest once.                  |
-| `pnpm test:watch`      | Run Vitest in watch mode.         |
-| `pnpm prisma:validate` | Validate the Prisma schema.       |
-| `pnpm prisma:generate` | Generate the local Prisma client. |
-
-## Data and migrations
-
-`DATABASE_URL` is the pooled runtime PostgreSQL connection. `DIRECT_URL` is the
-direct connection used by Prisma migration commands. Do not run production
-migrations automatically as part of a Vercel build; follow the controlled
-release process in `docs/DEPLOYMENT.md`.
-
-The initial migration must add the PostgreSQL full-text-search generated column
-and GIN index specified in `docs/DATABASE.md`.
-
-## Documentation
-
-- `docs/PROJECT_SPEC.md` — V1 scope and success criteria
-- `docs/ARCHITECTURE.md` — architectural boundaries and approved structure
-- `docs/DATABASE.md` — data model and full-text-search design
-- `docs/UI_GUIDELINES.md` — responsive and accessibility standards
-- `docs/DEPLOYMENT.md` — deployment architecture and environment separation
-- `docs/DECISIONS.md` — architecture decision record
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
