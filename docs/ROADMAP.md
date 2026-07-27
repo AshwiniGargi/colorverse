@@ -12,6 +12,8 @@ Project setup
 - PostgreSQL
 - shadcn/ui
 - Deployment
+- Clerk configuration for staff-only administration
+- Environment-variable validation
 
 ---
 
@@ -64,6 +66,12 @@ Admin Dashboard
 Launch
 
 - Vercel deployment
-- Analytics
 - Google Search Console
 - Sitemap
+- Production SEO and accessibility audit
+
+## Post-V1 Operations
+
+- Analytics
+- Sentry
+- Advanced monitoring

@@ -42,12 +42,19 @@ Provide free, beautiful and educational printable content while offering premium
 
 # Out of Scope
 
-- Authentication
+- Public user authentication and accounts
 - Payments
 - AI generation
 - Online colouring
 - Saved artwork
 - Mobile app
+
+## Administration Access
+
+The V1 Admin Dashboard is restricted to staff. It uses Clerk authentication with
+Google as the only sign-in method. This is an administrative security boundary,
+not a public user-account feature. No visitor profile, registration, favourites,
+or saved content is included in V1.
 
 ---
 
